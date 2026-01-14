@@ -1,7 +1,13 @@
-import './App.css';
+import HomePage from '@components/HomePage/HomePage';
+import Info from '@components/info/info';
 
 function App() {
-    return <div>Ecommerse</div>;
+    return (
+        <>
+            <HomePage />
+            <Info />
+        </>
+    );
 }
 
 export default App;
