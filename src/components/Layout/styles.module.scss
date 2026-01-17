@@ -1,9 +1,11 @@
 .wrapLayout {
     display: flex;
     justify-content: center;
+    //align-items: flex-start; /* tránh đẩy xuống giữa */
 }
 
 .container {
     width: 1250px;
-    height: 100vh;
+    min-height: auto;
+    //padding-top: 100px;
 }
