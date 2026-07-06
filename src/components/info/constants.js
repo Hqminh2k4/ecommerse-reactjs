@@ -12,7 +12,7 @@ export const dataInfo = [
         title: '100% Safe Payments',
         description: '9 month installments',
         src: CreditCard
-    },
+    },  
     {
         title: '14-Days returns',
         description: 'Shop with confidence',
