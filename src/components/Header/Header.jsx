@@ -22,9 +22,15 @@ function MyHeader() {
     } = styles;
     const { scrollPosition } = useScrollHandling();
     const [fixedPosition, setFixedPosition] = useState(false);
-    console.log(scrollPosition);
-    const { isOpen, setIsOpen } = useContext(SideBarContext);
-    console.log(isOpen);
+    //console.log(scrollPosition);
+    //const { isOpen, setIsOpen } = useContext(SideBarContext);
+    //console.log(isOpen);
+    const { setIsOpen, setType } = useContext(SideBarContext);
+
+    const handleOpenSideBar = (type) => {
+        setIsOpen(true);
+        setType(type);
+    };
     useEffect(() => {
         /*
         if (scrollPosition > 80) {
@@ -87,14 +93,22 @@ function MyHeader() {
                             height={23}
                             src={reLoadIcon}
                             alt='Reload'
+                            onClick={() => handleOpenSideBar('compare')}
                         />
                         <img
                             width={26}
                             height={26}
                             src={heartIcon}
                             alt='Heart'
+                            onClick={() => handleOpenSideBar('wishlist')}
                         />
-                        <img width={27} height={27} src={cartIcon} alt='Cart' />
+                        <img
+                            width={27}
+                            height={27}
+                            src={cartIcon}
+                            alt='Cart'
+                            onClick={() => handleOpenSideBar('cart')}
+                        />
                     </div>
                 </div>
             </div>
